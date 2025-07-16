@@ -1,3 +1,15 @@
+#root {
+    height: 100%;
+}
+html, body{
+    background-color: aliceblue;
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
 a.navbar-item {
     top: 0.4rem;
     align-self: center;
@@ -11,4 +23,30 @@ a.navbar-item:hover {
 .button {
     align-self: center;
     top: 0.3rem;
+}
+button.is-normal {
+    background-color: aliceblue;
+}
+
+/* container section  */
+.container {
+    flex: 1;
+}
+
+.column h1 {
+    line-height: normal;
+}
+
+.left-column {
+    gap: 10px;
+}
+ 
+button.is-normal.has-background-grey-darker {
+    align-self:start;
+}
+
+.column img {
+    height: 500px;
+    width: auto;
+    border-radius: 10px;
 }
