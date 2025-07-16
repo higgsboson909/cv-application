@@ -50,3 +50,8 @@ button.is-normal.has-background-grey-darker {
     width: auto;
     border-radius: 10px;
 }
+
+footer {
+/* --bulma-footer-padding:inherit !important; */
+    padding: 8px !important;
+}
