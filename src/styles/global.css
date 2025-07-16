@@ -1,0 +1,14 @@
+a.navbar-item {
+    top: 0.4rem;
+    align-self: center;
+}
+
+a.navbar-item:hover {
+    background-color: inherit;
+    cursor: inherit;
+}
+
+.button {
+    align-self: center;
+    top: 0.3rem;
+}
