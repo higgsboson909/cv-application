@@ -55,3 +55,7 @@ footer {
 /* --bulma-footer-padding:inherit !important; */
     padding: 8px !important;
 }
+
+.inherit {
+    all: inherit;
+}

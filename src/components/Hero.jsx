@@ -1,5 +1,5 @@
 import cv_image from "../assets/images/cv.jpg";
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div class="container is-flex is-align-items-center">
       <div className="column is-1"></div>
@@ -9,10 +9,13 @@ const Hero = () => {
             Build Professional<br></br> Resume
           </h1>
           <div className="has-text-grey-dark">
-            Quickly create a standout CV that highlights your<br></br> skillsl —
+            Quickly create a standout CV that highlights your<br></br> skills —
             no hassle, all impact.
           </div>
-          <button className="button is-normal has-background-grey-darker">
+          <button
+            onClick={props.handleClick}
+            className="button is-normal has-background-grey-darker"
+          >
             Get Started
           </button>
         </div>

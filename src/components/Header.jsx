@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header(props) {
 
   return (
     <>
@@ -13,7 +13,7 @@ export default function Header() {
           <a className="navbar-item is-capitalized has-text-weight-bold is-size-4 has-text-info-100">
             CV Make
           </a>
-          <button className=" button is-normal is-white">Get Started</button>
+          <button onClick={props.handleClick} className=" button is-normal is-white">Get Started</button>
         </div>
 
         <div className="column is-2"></div>
