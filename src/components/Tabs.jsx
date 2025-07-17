@@ -6,8 +6,8 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 const Tabs = () => {
   return (
-    <div >
-      <div class="tabs is-toggle is-toggle-rounded">
+    <div className='block'>
+      <div class="tabs is-toggle is-toggle-rounded has-background-transparent">
         <ul>
           <li class="is-active ">
             <a className="has-background-grey-darker inherit">

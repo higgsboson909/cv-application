@@ -59,3 +59,25 @@ footer {
 .inherit {
     all: inherit;
 }
+
+.input-box{
+    --bulma-box-background-color: white;
+    border: #353a46 2px solid;
+    flex-direction: column;
+
+}
+
+.center {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    background-color: white;
+    color: black;
+    --bulma-input-placeholder-color: grey;
+    --bulma-input-focus-l: 24%;
+    --bulma-input-focus-h: 225;
+    --bulma-input-focus-s: 12%;
+}
