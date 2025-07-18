@@ -9,38 +9,38 @@ const Tabs = (props) => {
 
   return (
     <>
-      <div className="block">
+      <div className="block tabs-block">
         <div className="tabs is-toggle is-toggle-rounded ">
           <ul>
-            <li className={(activeTab == '1' && "is-active")}>
-              <a>
-                <button onClick={() => props.handleClick("1")}>
+            <li className={activeTab === "1" && "is-active"}>
+              <button onClick={() => props.handleClick("1")}>
+                <a>
                   <span class="icon is-small">
                     <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
                   </span>
                   <span>General Info</span>
-                </button>
-              </a>
+                </a>
+              </button>
             </li>
-            <li className={(activeTab == '2' && "is-active")}>
-              <a>
-                <button onClick={() => props.handleClick("2")}>
+            <li className={activeTab === "2" && "is-active"}>
+              <button onClick={() => props.handleClick("2")}>
+                <a>
                   <span className="icon is-small">
                     <FontAwesomeIcon icon={faLightbulb}></FontAwesomeIcon>
                   </span>
                   <span>Skills</span>
-                </button>
-              </a>
+                </a>
+              </button>
             </li>
-            <li className={activeTab == '3' && "is-active"}>
-              <a>
-                <button onClick={() => props.handleClick("3")}>
+            <li className={activeTab === "3" && "is-active"}>
+              <button onClick={() => props.handleClick("3")}>
+                <a>
                   <span className="icon is-small">
                     <FontAwesomeIcon icon={faGraduationCap}></FontAwesomeIcon>
                   </span>
                   <span>Education</span>
-                </button>
-              </a>
+                </a>
+              </button>
             </li>
           </ul>
         </div>

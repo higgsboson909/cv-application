@@ -20,7 +20,7 @@ a.navbar-item:hover {
     cursor: inherit;
 }
 
-.button {
+.button.is-normal.is-white {
     align-self: center;
     top: 0.3rem;
 }
@@ -92,4 +92,8 @@ footer {
     background-color: white;
     border-color: var(--bulma-tabs-toggle-link-hover-border-color);
     z-index: 2;
+}
+
+.tabs-block{
+    justify-self: center;
 }
