@@ -1,5 +1,6 @@
 import React from "react";
 import InputField from "./InputField";
+import TextArea from "./TextArea";
 
 const GeneralInfo = () => {
   return (
@@ -38,6 +39,9 @@ const GeneralInfo = () => {
           placeholder="Park 123"
           label="Address:"
         ></InputField>
+      </div>
+      <div className="columns">
+        <TextArea label="Summary" ></TextArea>
       </div>
     </div>
   );

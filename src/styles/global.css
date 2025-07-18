@@ -81,3 +81,15 @@ footer {
     --bulma-input-focus-h: 225;
     --bulma-input-focus-s: 12%;
 }
+
+.tabs.is-toggle li.is-active a {
+    background-color: #353a46;
+    border-color:dimgrey;
+}
+
+.tabs.is-toggle a:hover {
+    color: black;
+    background-color: white;
+    border-color: var(--bulma-tabs-toggle-link-hover-border-color);
+    z-index: 2;
+}
