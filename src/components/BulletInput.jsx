@@ -14,7 +14,7 @@ const BulletInput = (props) => {
             className="button has-background-grey-darker"
             onClick={() => {
               setClick(true);
-              props.count < 5 && props.handleClick((n) => {if(n < 5) return n + 1});
+              props.currentCount < props.count - 1 && props.handleClick(() => {return props.currentCount + 1});
             }}
           >
             Add a Bullet
