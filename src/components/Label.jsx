@@ -1,6 +1,7 @@
 import React from "react";
 
 const Label = (props) => {
+
   return (
     <div class="field">
       <label class="label has-text-black">{props.label}</label>

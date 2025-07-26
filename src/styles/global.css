@@ -97,3 +97,7 @@ footer {
 .tabs-block{
     justify-self: center;
 }
+
+.cv-preview{
+    border:#353a46 solid 2px;
+}

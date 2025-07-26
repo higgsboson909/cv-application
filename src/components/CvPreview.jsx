@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
+import CvTitle from "./CvTitle";
 
 const CvPreview = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div className="cv-preview has-background-white">
+    <CvTitle></CvTitle>
+  </div>;
+};
 
-export default CvPreview
+export default CvPreview;

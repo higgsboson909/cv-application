@@ -1,27 +1,31 @@
 import React, { useState } from "react";
+import Label from "./Label";
+import Input from "./Input";
 
-const BulletInput = (props) => {
-  const [click, setClick] = useState(false);
+const BulletInput = ({ placeholder, label, count=1 }) => {
+
+  const [newComp, setNewComp] = useState(1);
+
+  let bullets = [];
+  for (let i = 0; i < newComp && i < count; i++) {
+    let bullet = (
+      <Input
+        placeholder={placeholder}
+        handleClick={() => setNewComp((prev) => prev + 1)}
+        count={count}
+        key={i}
+      ></Input>
+    )
+    bullets.push(bullet)
+  }
 
   return (
-    <div className="field is-grouped">
-      <p className="control is-expanded">
-        <input className="input" type="text" placeholder={props.placeholder} />
-      </p>
-      <p className="control">
-        {!click && (
-          <button
-            className="button has-background-grey-darker"
-            onClick={() => {
-              setClick(true);
-              props.currentCount < props.count - 1 && props.handleClick(() => {return props.currentCount + 1});
-            }}
-          >
-            Add a Bullet
-          </button>
-        )}
-      </p>
-    </div>
+    <>
+      <label className="label has-text-black">
+        {label}
+      </label>
+      {bullets}
+    </>
   );
 };
 

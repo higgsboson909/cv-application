@@ -8,10 +8,10 @@ const Education = () => {
     <div>
       <Degree></Degree>
       <GeneralComp label="Languages">
-        <BulletInput placeholder="English, Urdu, etc.."></BulletInput>
+        <BulletInput placeholder="English, Urdu, etc.." count={4}></BulletInput>
       </GeneralComp>
       <GeneralComp label="Certificates">
-        <BulletInput placeholder="Full Stack JavaScript | The Odin Project.. etc"></BulletInput>
+        <BulletInput placeholder="Full Stack JavaScript | The Odin Project.. etc" count={2}></BulletInput>
       </GeneralComp>
     </div>
   );

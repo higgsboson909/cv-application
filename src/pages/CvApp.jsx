@@ -7,7 +7,7 @@ const CvApp = () => {
   return (
     <div className="container">
       <div className="section">
-        <div class="columns">
+        <div class="columns is-8">
           <div class="column">
             <FormSection></FormSection>
           </div>

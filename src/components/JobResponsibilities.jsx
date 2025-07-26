@@ -5,9 +5,7 @@ import BulletInput from './BulletInput'
 const JobResponsibilities = () => {
   return (
     <div>
-        <Label label="Job Responsibilities">
-            <BulletInput placeholder="Must be a Bullet"></BulletInput> 
-        </Label>
+            <BulletInput placeholder="Must be a Bullet" count={5} label="Job Responsibilities"></BulletInput> 
     </div>
   )
 }
