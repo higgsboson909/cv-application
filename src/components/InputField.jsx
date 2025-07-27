@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-const InputField = (props) => {
+const InputField = ({value, field, handleChange, type, placeholder, label}) => {
   return (
     <div className="column">
     <div class="field">
-      <label class="label has-text-black">{props.label}</label>
+      <label class="label has-text-black">{label}</label>
       <div class="control">
         <input
           class="input"
-          type={props.type}
-          placeholder={props.placeholder}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={event => (handleChange(field, event.target.value))}
         ></input>
       </div>
     </div>
