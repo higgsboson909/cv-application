@@ -7,12 +7,8 @@ const Education = () => {
   return (
     <div>
       <Degree></Degree>
-      <GeneralComp label="Languages">
-        <BulletInput placeholder="English, Urdu, etc.." count={4}></BulletInput>
-      </GeneralComp>
-      <GeneralComp label="Certificates">
-        <BulletInput placeholder="Full Stack JavaScript | The Odin Project.. etc" count={2}></BulletInput>
-      </GeneralComp>
+        <BulletInput placeholder="English, Urdu, etc.." label="Languages" count={4}></BulletInput>
+        <BulletInput label="Certificates" placeholder="Full Stack JavaScript | The Odin Project.. etc" count={2}></BulletInput>
     </div>
   );
 };

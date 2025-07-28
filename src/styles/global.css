@@ -104,3 +104,9 @@ footer {
   max-width: 800px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
+
+.bullet-input {
+  padding: 10px;
+  border: 1px solid #353a46;
+  border-radius: 5px;
+}

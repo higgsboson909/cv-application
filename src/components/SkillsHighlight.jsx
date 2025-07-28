@@ -3,8 +3,7 @@ import Label from "./Label";
 import BulletInput from "./BulletInput";
 
 const SkillsHighlight = () => {
-
-const [newComp, setNewComp] = useState(1);
+  const [newComp, setNewComp] = useState(1);
 
   return (
     <div className="block">

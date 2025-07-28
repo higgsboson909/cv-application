@@ -3,12 +3,19 @@ import SkillsHighlight from "./SkillsHighlight";
 import Experience from "./Experience";
 import JobResponsibilities from "./JobResponsibilities";
 
-const Skills = () => {
+const Skills = ({ data, handleChange }) => {
+
   return (
     <>
-    <SkillsHighlight></SkillsHighlight>
-    <Experience></Experience>
-    <JobResponsibilities></JobResponsibilities>
+      <SkillsHighlight
+        skills={data.skillHighlights}
+        handleChange={handleChange}
+      ></SkillsHighlight>
+      <Experience data={data} handleChange={handleChange}></Experience>
+      <JobResponsibilities
+        data={data}
+        handleChange={handleChange}
+      ></JobResponsibilities>
     </>
   );
 };

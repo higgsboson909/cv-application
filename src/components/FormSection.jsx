@@ -5,20 +5,22 @@ import GeneralInfo from "./GeneralInfo";
 import Skills from "./Skills";
 import Education from "./Education";
 
-const FormSection = ({ generalInfo, generalInfoChange }) => {
+const FormSection = ({ data, generalInfoChange, skillsInfoChange }) => {
   const [tab, setTab] = useState("1");
-
   return (
     <div>
       <div className="input-box box has-background-transparent">
         <Tabs handleClick={setTab} currentTab={tab}></Tabs>
         {tab == "1" ? (
           <GeneralInfo
-            data={generalInfo}
+            data={data.generalInfo}
             handleChange={generalInfoChange}
           ></GeneralInfo>
         ) : tab == "2" ? (
-          <Skills></Skills>
+          <Skills
+            data={data.skillsInfo}
+            handleChange={skillsInfoChange}
+          ></Skills>
         ) : (
           <Education></Education>
         )}

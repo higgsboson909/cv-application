@@ -2,30 +2,51 @@ import React, { useState } from "react";
 import Label from "./Label";
 import Input from "./Input";
 
-const BulletInput = ({ placeholder, label, count=1 }) => {
+const BulletInput = ({ placeholder, label, count = 1 }) => {
+  const [bulletInputs, setBulletInputs] = useState([""]);
 
-  const [newComp, setNewComp] = useState(1);
+  const handleClick = () => {
+    bulletInputs.length < count && setBulletInputs((prev) => [...prev, ""]);
+  };
 
-  let bullets = [];
-  for (let i = 0; i < newComp && i < count; i++) {
-    let bullet = (
-      <Input
-        placeholder={placeholder}
-        handleClick={() => setNewComp((prev) => prev + 1)}
-        count={count}
-        key={i}
-      ></Input>
-    )
-    bullets.push(bullet)
-  }
-
+  const handleChange = (index, value) => {
+    setBulletInputs((prev) => {
+      let array = [...prev];
+      array[index] = value;
+      return array;
+    });
+  };
+  console.log(bulletInputs);
   return (
-    <>
-      <label className="label has-text-black">
-        {label}
-      </label>
-      {bullets}
-    </>
+    <div className="bullet-input">
+      <div className="field is-grouped">
+        <label className="label has-text-black is-expanded">{label}</label>
+        <p className="control">
+          <button class="button is-small" onClick={handleClick}>
+            Add
+          </button>
+        </p>
+      </div>
+      {bulletInputs.map((bInput, i) => (
+        <div className="field is-grouped">
+          <p className="control is-expanded">
+            <input
+              className="input"
+              type="text"
+              placeholder={placeholder}
+              value={bInput}
+              onChange={(event) => handleChange(i, event.target.value)}
+            />
+          </p>
+        </div>
+      ))}
+      {/* <div className="field is-grouped">
+        <p className="control is-expanded">
+          <input className="input" type="text" placeholder={placeholder} />
+        </p>
+      </div> */}
+      {/* <Input placeholder={placeholder}></Input> */}
+    </div>
   );
 };
 
