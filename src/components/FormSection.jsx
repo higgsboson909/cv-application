@@ -5,7 +5,7 @@ import GeneralInfo from "./GeneralInfo";
 import Skills from "./Skills";
 import Education from "./Education";
 
-const FormSection = ({ data, generalInfoChange, skillsInfoChange }) => {
+const FormSection = ({ data, generalInfoChange, skillsInfoChange, eduInfoChange }) => {
   const [tab, setTab] = useState("1");
   return (
     <div>
@@ -22,7 +22,10 @@ const FormSection = ({ data, generalInfoChange, skillsInfoChange }) => {
             handleChange={skillsInfoChange}
           ></Skills>
         ) : (
-          <Education></Education>
+          <Education
+            data={data.eduInfo}
+            handleChange={eduInfoChange}
+          ></Education>
         )}
       </div>
     </div>

@@ -29,7 +29,7 @@ const CvApp = () => {
     gradDate: "",
     languages: [''],
     certificates: [''],
-    uniName: "",
+    uniName: ""
   });
 
   const handleGeneralInfoChange = (field, value) => {
@@ -40,6 +40,12 @@ const CvApp = () => {
     setSkillsInfo(prev => ({...prev, [field]: value}))
   };
 
+  const handleEduInfoChange = (field, value) => {
+    setEduInfo(prev => ({...prev, [field]: value}))
+  };
+
+
+
   const cvData = {
     generalInfo,
     skillsInfo,
@@ -48,6 +54,8 @@ const CvApp = () => {
 
   console.log(cvData.generalInfo);
   console.log(cvData.skillsInfo);
+  console.log(cvData.eduInfo);
+
 
   return (
     <div className="container">
@@ -58,6 +66,7 @@ const CvApp = () => {
               data={cvData}
               generalInfoChange={handleGeneralInfoChange}
               skillsInfoChange={handleSkillsInfoChange}
+              eduInfoChange={handleEduInfoChange}
             ></FormSection>
           </div>
           <div class="column">
