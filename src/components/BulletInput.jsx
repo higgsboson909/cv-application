@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Label from "./Label";
 import Input from "./Input";
 
-const BulletInput = ({ placeholder, handleChange, label, count = 1, data }) => {
-  console.log("data", typeof data);
+const BulletInput = ({ placeholder, handleChange, label, count = 1, data, field }) => {
   const [bulletInputs, setBulletInputs] = useState(data);
 
   const handleClick = () => {
@@ -14,13 +13,10 @@ const BulletInput = ({ placeholder, handleChange, label, count = 1, data }) => {
     setBulletInputs((prev) => {
       let array = [...prev];
       array[index] = value;
-      handleChange("skillHighlights", array);
+      handleChange([field], array);
       return array;
     });
   };
-  console.log("bullet inputs", bulletInputs);
-  console.log("hey", bulletInputs);
-  console.log("data", data);
 
   return (
     <div className="bullet-input">

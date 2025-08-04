@@ -11,7 +11,7 @@ console.log('skills', skills);
         placeholder="Project Management"
         count={6}
         data={skills}
-        
+        field={'skillHighlights'} 
         handleChange={handleChange}
       ></BulletInput>
     </div>

@@ -20,15 +20,15 @@ const CvApp = () => {
     endDate: "",
     companyName: "",
     companyLocation: "",
-    jobRes: []
+    jobRes: ['']
   });
 
   const [eduInfo, setEduInfo] = useState({
     degreeType: "",
     major: "",
     gradDate: "",
-    languages: [],
-    certificates: [],
+    languages: [''],
+    certificates: [''],
     uniName: "",
   });
 

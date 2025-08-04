@@ -12,7 +12,7 @@ const Skills = ({ data, handleChange }) => {
       ></SkillsHighlight>
       <Experience data={data} handleChange={handleChange}></Experience>
       <JobResponsibilities
-        data={data}
+        data={data.jobRes}
         handleChange={handleChange}
       ></JobResponsibilities>
     </>
