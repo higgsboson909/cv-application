@@ -14,7 +14,7 @@ const CvApp = () => {
   });
 
   const [skillsInfo, setSkillsInfo] = useState({
-    skillHighlights: ['hi', 'oye'],
+    skillHighlights: [''],
     jobRole: "",
     startDate: "",
     endDate: "",

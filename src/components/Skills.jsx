@@ -4,7 +4,6 @@ import Experience from "./Experience";
 import JobResponsibilities from "./JobResponsibilities";
 
 const Skills = ({ data, handleChange }) => {
-
   return (
     <>
       <SkillsHighlight
