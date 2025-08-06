@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import FormSection from "../components/FormSection";
-import CvPreview from "../components/CvPreview";
+import CvPreview from "../components/Cv_preview/CvPreview";
 
 const CvApp = () => {
   const [generalInfo, setGeneralInfo] = useState({
@@ -14,22 +14,22 @@ const CvApp = () => {
   });
 
   const [skillsInfo, setSkillsInfo] = useState({
-    skillHighlights: [''],
+    skillHighlights: [""],
     jobRole: "",
     startDate: "",
     endDate: "",
     companyName: "",
     companyLocation: "",
-    jobRes: ['']
+    jobRes: [""],
   });
 
   const [eduInfo, setEduInfo] = useState({
     degreeType: "",
     major: "",
     gradDate: "",
-    languages: [''],
-    certificates: [''],
-    uniName: ""
+    languages: [""],
+    certificates: [""],
+    uniName: "",
   });
 
   const handleGeneralInfoChange = (field, value) => {
@@ -37,25 +37,22 @@ const CvApp = () => {
   };
 
   const handleSkillsInfoChange = (field, value) => {
-    setSkillsInfo(prev => ({...prev, [field]: value}))
+    setSkillsInfo((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleEduInfoChange = (field, value) => {
-    setEduInfo(prev => ({...prev, [field]: value}))
+    setEduInfo((prev) => ({ ...prev, [field]: value }));
   };
-
-
 
   const cvData = {
     generalInfo,
     skillsInfo,
-    eduInfo,
+    eduInfo
   };
 
   console.log(cvData.generalInfo);
   console.log(cvData.skillsInfo);
   console.log(cvData.eduInfo);
-
 
   return (
     <div className="container">
@@ -70,7 +67,7 @@ const CvApp = () => {
             ></FormSection>
           </div>
           <div class="column">
-            <CvPreview></CvPreview>
+            <CvPreview data={cvData}></CvPreview>
           </div>
         </div>
       </div>

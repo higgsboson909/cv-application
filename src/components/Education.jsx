@@ -28,3 +28,4 @@ const Education = ({ data, handleChange }) => {
 };
 
 export default Education;
+

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CvTitle = () => {
+const CvTitle = ({title}) => {
   return (
     <section className='section'>
-    <div></div>
+    <div>{title}</div>
     </section>
   )
 }
