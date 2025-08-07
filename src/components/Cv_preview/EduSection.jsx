@@ -7,8 +7,8 @@ const EduSection = ({ data }) => {
   return (
     <>
       <div>
-        <h4 className="title is-6 has-text-black">{"Education"}</h4>
-        {/* break */}
+        <h4 className="title is-6 has-text-black" style={{marginBottom:"10px"}}>{"Education"} </h4>
+        <hr className="hr has-background-grey-light" />
         <p>
           {data.degreeType}
           <SpecialText
@@ -18,8 +18,8 @@ const EduSection = ({ data }) => {
         </p>
         <SpecialText bold={data.uniName}></SpecialText>
       </div>
-      <Section heading={"Languages"} value={data.languages}></Section>
-      <Section heading={"Certifications"} value={data.certificates}></Section>
+      <Section heading={"Languages"} value={data.languages} br={true} marginBottom="10px" wrap={true} ></Section>
+      <Section heading={"Certifications"} value={data.certificates} br={true} marginBottom="10px" disc={false}></Section>
     </>
   );
 };

@@ -98,15 +98,49 @@ footer {
   justify-self: center;
 }
 
-.cv-preview {
+.cvPreview {
   border: #353a46 solid 2px;
   width: 100%;
   max-width: 800px;
+  color: black;
+  background-color: white;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.cv-top{
+  margin-bottom: 10px !important;
+}
+.sec {
+  margin-bottom: 5px !important;
+}
+.title {
+  /* margin-bottom: 5px !important; */
+
 }
 
 .bullet-input {
   padding: 10px;
   border: 1px solid #353a46;
   border-radius: 5px;
+}
+
+.hr {
+  margin-top: 3px;
+  margin-bottom: 4px;
+  height: 1.5px;
+}
+
+.is-flex li {
+  flex-basis: 50%;
+}
+.is-flex li {
+  margin-bottom: 5px !important;
+}
+
+.disc {
+  margin-left: 20px;
+  list-style: disc;
+}
+.no-disc {
+  margin-left: -20px;
+  list-style: none;
 }

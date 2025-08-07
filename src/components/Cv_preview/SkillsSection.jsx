@@ -9,6 +9,10 @@ const SkillsSection = ({ data }) => {
         heading={"Skill Highlights"}
         value={data.skillHighlights}
         br={true}
+        // marginBottom="10px"
+        wrap={true}
+        bg="white"
+        disc={true}
       ></Section>
       <Experience_Section data={data}></Experience_Section>
     </>

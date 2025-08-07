@@ -2,11 +2,11 @@ import React from "react";
 
 const DateSection = ({ startDate, endDate, gradDate }) => {
   return startDate && endDate ? (
-    <div>
+    <span>
       {" - " + startDate} to {endDate}
-    </div>
+    </span>
   ) : (
-    <div> - { gradDate }</div>
+    <span> - { gradDate }</span>
   );
 };
 

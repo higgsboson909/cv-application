@@ -5,31 +5,34 @@ import CvPreview from "../components/Cv_preview/CvPreview";
 
 const CvApp = () => {
   const [generalInfo, setGeneralInfo] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    address: "",
-    summary: "",
+    firstName: "Jhon",
+    lastName: "Doe",
+    email: "jhonDoe@xyz.com",
+    phone: "80090030012",
+    address: "Park 123 - XYZ",
+    summary:
+      "Senior Web Developer specializing in front end development. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including HTML5, PHP, OOP, JavaScript, CSS, MySQL. Strong background in project management and customer relations.",
   });
 
   const [skillsInfo, setSkillsInfo] = useState({
-    skillHighlights: [""],
-    jobRole: "",
-    startDate: "",
-    endDate: "",
-    companyName: "",
-    companyLocation: "",
-    jobRes: [""],
+    skillHighlights: ["Project Managment"],
+    jobRole: "Web Developer",
+    startDate: "2024-04",
+    endDate: "2025-02",
+    companyName: "Luna Web Design",
+    companyLocation: "New York",
+    jobRes: [
+      "Cooperate with designers to create clean interfaces and simple, intuitive interactions and experiences.",
+    ],
   });
 
   const [eduInfo, setEduInfo] = useState({
-    degreeType: "",
-    major: "",
-    gradDate: "",
-    languages: [""],
-    certificates: [""],
-    uniName: "",
+    degreeType: "Bachelors",
+    major: "Computer Information Systems",
+    gradDate: "2023",
+    languages: ["English"],
+    certificates: ["PHP Framework (certificate): Zend, CodeIgniter, Symfony."],
+    uniName: "Columbia University, NY",
   });
 
   const handleGeneralInfoChange = (field, value) => {
@@ -47,7 +50,7 @@ const CvApp = () => {
   const cvData = {
     generalInfo,
     skillsInfo,
-    eduInfo
+    eduInfo,
   };
 
   console.log(cvData.generalInfo);
@@ -66,7 +69,7 @@ const CvApp = () => {
               eduInfoChange={handleEduInfoChange}
             ></FormSection>
           </div>
-          <div class="column">
+          <div class="cvPreview column">
             <CvPreview data={cvData}></CvPreview>
           </div>
         </div>
